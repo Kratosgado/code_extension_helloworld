@@ -5,6 +5,14 @@ import * as vscode from "vscode";
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
+	const command = 'myExtension.sayHello';
+	const commandHandler = (name: string) => {
+		let user = vscode.window.createInputBox().value;
+		vscode.window.showInformationMessage(`${user}!`);
+	};
+
+	let greet = vscode.commands.registerCommand(command, commandHandler);
+	context.subscriptions.push(vscode.commands.registerCommand(command, commandHandler, "Kratos"));
 
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated

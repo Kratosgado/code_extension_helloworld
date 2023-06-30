@@ -1,8 +1,17 @@
 {
   "name": "helloworld",
   "displayName": "HelloWorld",
-  "description": "",
+  "description": "first vscode extension project",
   "version": "0.0.1",
+  "publisher": "vscode-samples",
+  "author": {
+    "name": "Prince Mbeah Essilfie",
+    "url": "https://github.com/KratosGado"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kratosgado/code_extension_helloworld.git"
+  },
   "engines": {
     "vscode": "^1.79.0"
   },
@@ -16,6 +25,10 @@
       {
         "command": "helloworld.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "myExtension.sayHello",
+        "title": "Say hello"
       }
     ]
   },
